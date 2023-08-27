@@ -515,12 +515,14 @@ nav .icon-img{
     }
 
     .header-text{
-        margin-top: 120%;
+        margin-top: 130%;
         font-size: 16px;
     }
+
     .header-text h1{
         font-size: 30px;
     }
+
     nav .icon-img{
         display: block;
         font-size: 25px;
@@ -546,7 +548,6 @@ nav .icon-img{
         display: block;
         margin: 25px;
     }
-
 
     .fa-solid.fa-bars {
         cursor: pointer;
@@ -587,9 +588,9 @@ nav .icon-img{
         font-size: 14px;
     }
 
-    .tab-links{
-        font-size: 16px;
-        margin-right: 20px;   
+    .skill-list div:hover{
+        transform: translateY(-10px);
+        border: 5px solid #7a4a81;
     }
 
     .contact-left, .contact-right{
