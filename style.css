@@ -523,6 +523,12 @@ nav .icon-img{
         font-size: 30px;
     }
 
+    .about-col-1 img{
+        margin-top: auto;
+        height: 105%;
+        width: 105%;
+    }
+
     nav .icon-img{
         display: block;
         font-size: 25px;
@@ -581,7 +587,7 @@ nav .icon-img{
     }
 
     .about-col-1{
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
 
     .about-col-2{
