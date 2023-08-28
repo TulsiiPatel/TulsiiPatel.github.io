@@ -155,7 +155,8 @@
                     <h1 class="sub-title">Contact Me</h1>
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Name" required>
-                        <input type="number" name="Phone Number" placeholder="Phone Number " required>
+                        <input type="number" id="phoneInput" name="Phone Number" placeholder="Phone Number " required>
+                            <div id="error" style="color: rgb(241, 6, 6);"></div>
                         <input type="email" name="Email" placeholder="Email" required>
                         <textarea name="Message" rows="6" placeholder="Message"></textarea>
                         <button type="submit" class="btn btn2"><h3>Submit</h3></button>
@@ -232,6 +233,24 @@
   </script>
 ------------DARK Mode-------------->  
 
+    <script>
+        const phoneInput = document.getElementById('phoneInput');
+        const errorDiv = document.getElementById('error');
+    
+        phoneInput.addEventListener('input', function() {
+          const maxLength = 10; 
+          const currentValue = phoneInput.value.replace(/\D/g, '');
+          const limitedValue = currentValue.slice(0, maxLength);
+    
+          if (currentValue.length > maxLength) {
+            errorDiv.textContent = 'Phone number should not exceed 10 digits';
+          } else {
+            errorDiv.textContent = '';
+          }
+    
+          phoneInput.value = limitedValue;
+        });
+    </script>   
 
 </body>
 </html>
