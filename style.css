@@ -11,7 +11,7 @@ html{
 
 body{
     background: #0a010e;
-    color: white
+    color: rgb(245, 220, 248);
     }
 
 /*-------- DARK MODE -----------
@@ -82,8 +82,9 @@ body{
 }
 
 .container{
-    padding: 10px 10%;
-
+    padding: 1px 10%;
+    margin-bottom: 0.5%;
+    box-sizing: border-box;
 }
 
 nav{
@@ -93,9 +94,19 @@ nav{
     flex-wrap: wrap;
 }
 
+.sticky {
+    position: fixed;
+    padding: 5px 5%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0a010e;
+    z-index: 1000;
+}
+
 nav h1 {
     display: inline-block;
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 30px;
 }
   
@@ -110,13 +121,14 @@ nav .text {
 nav ul li{
     display: inline-block;
     list-style: none;
+    margin-right: 20%;
     margin: 10px 20px;
 }
 
 nav ul li a{
     color: #9f62a7;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 600;
     position: relative;
 }
@@ -201,13 +213,14 @@ nav ul li a:hover::after{
 
 /*-----------------About---------------*/
 #about{
-    padding: 30px 0;
+    padding: 5% 0;
 }
 
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 
 .about-col-1{
@@ -240,7 +253,7 @@ nav ul li a:hover::after{
 /*------------------Skill--------------*/
 
 #skill{
-    padding: 30px 0;
+    padding: 5% 0;
 }
 
 .skill-list{
@@ -251,23 +264,23 @@ nav ul li a:hover::after{
 }
 
 .skill-list div{
-    background: #2f1934;
+    background: #140816;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-    border: 5px solid transparent;
+    border: 1px solid #9f62a7;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
-.skill-list .fa-school{
+.skill-list .fa-laptop-code{ 
     font-size: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.skill-list .fa-code{
+.skill-list .fa-server{
     font-size: 65px;
     display: flex;
     justify-content: center;
@@ -298,8 +311,9 @@ nav ul li a:hover::after{
 }
 
 .skill-list div:hover{
-    transform: translateY(-10px);
-    border: 5px solid #7a4a81;
+    transform: translateY(-15px);
+    border: 2px solid #7a4a81;
+    box-shadow: 0 0 20px rgba(159, 98, 167, 0.5);
 }
 
 .skill-list ul li{
@@ -310,31 +324,106 @@ nav ul li a:hover::after{
 }
 
 
-
-/*-----------------portfolio---------------*/
-
-#portfolio{
-    padding: 30px 0;
+/*-----------------education---------------*/
+#education{
+    padding: 5% 0;
+    margin-bottom: 1%;
 }
 
-.work-list{
+.education-section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
 
+.college{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #9f62a7;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.college:hover {
+    background-color: #140816;
+    border: 2px solid #9f62a7;
+    box-shadow: 0 0 20px rgba(159, 98, 167, 0.5);
+}
+
+
+.college-name{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+  
+.degree{
+    font-size: 18px;
+    font-weight: bold;
+    color: #7a4a81;
+    margin-bottom: 5px;
+}
+/*
+.graduation-date{
+    font-size: 18px;
+    color: #696565;
+    margin-bottom: 5px;
+}
+
+.description{
+    font-size: 16px;
+    margin-top: 5px;
+    color: #444;
+    margin-bottom: 5px;
+}
+*/
+.courses-list{
+    display: grid;
+    font-weight: 500;
+    grid-template-columns: repeat(3, minmax(calc(33.33% - 10px), 1fr)); /* Adjust the width and spacing as needed */
+    grid-gap: 10px; /* Add a small gap between courses */
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #aa9cb4;
+    margin-bottom: 5px;
+}
+
+.course{
+    margin-bottom: 5px;
+}
+
+
+/*-----------------portfolio---------------*/
+
+#portfolio{
+    padding: 5% 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 40px;
+}
+
 .work{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.work:hover{
+    box-shadow: 0 0 20px rgba(159, 98, 167, 0.5);
 }
 
 .work img{
     width: 100%;
     border-radius: 10px;
     display: block;
-    transition: transform 0.5s;
     border: 2px solid #2f1934;
 }
 
@@ -357,7 +446,7 @@ nav ul li a:hover::after{
     transform: height 0.5s;
 }
 
-.layer h3{
+.layer h2{
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -377,7 +466,7 @@ nav ul li a:hover::after{
 }
 
 .work:hover img{
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 
 .work:hover .layer{
@@ -413,17 +502,19 @@ nav ul li a:hover::after{
 }
 
 .social-icons{
-    margin-top: 50px;
+    margin-top: 75px;
 }
 
 .social-icons a{
     text-decoration: none;
     font-size: 30px;
-    margin-right: 10px;
+    margin-right: 5px;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 5px;
     color: #c47acd; 
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    line-height: 1px;
     transition: transform 0.5s;
 }
 
@@ -563,7 +654,7 @@ nav .icon-img{
         color: #ffffff;
         left: 90%;
         transform: translateX(-50%); 
-        top: 5%;
+        top: 30%;
         z-index: 2;
     }
 
@@ -628,14 +719,14 @@ nav .icon-img{
         align-items: center;
     }
 
-    .skill-list .fa-school{
+    .skill-list .fa-laptop-code{
         font-size: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .skill-list .fa-code{
+    .skill-list .fa-server{
         font-size: 30px;
         display: flex;
         justify-content: center;
@@ -674,6 +765,7 @@ nav .icon-img{
     font-size: 18px;
     display: block;
 }
+
 
 
 

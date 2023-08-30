@@ -3,42 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tulsi Patel - Personal Portfolio Website</title>
+    <title>Tulsi Patel | Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/ff45900f16.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    
-<!-------------Header---------------->    
-    <div id="header">
-        <div class="container">
-            <nav>
-                <h1><span class="bracket">&lt;</span> <span class="text">TULSI</span> <span class="bracket">&gt;</span></h1>
-
-                <ul id="sidemenu">
-                    <i class="fa-solid fa-xmark" style="color: #ffffff; cursor: pointer;" onclick="closemenu()"></i>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-   
 <!----------- DARK MODE ----------------
                     <li><button onclick="myFunction()" class="darkbtn">
                         <i class="fa-regular fa-sun"></i>
                         <i class="fa-regular fa-moon"></i>
                     </button></li> 
-------------- DARK MODE -------------->
-
+------------- DARK MODE -------------->    
+    
+<!-------------Header---------------->    
+    <div id="header">
+        <div class="container">
+            <nav class="sticky">
+                <a href="index.html">
+                <h1><span class="bracket">&lt;</span> <span class="text">TULSI</span> <span class="bracket">&gt;</span></h1>
+                </a>
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-xmark" id="close-icon" style="color: #ffffff; cursor: pointer;" onclick="closemenu()"></i>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+<!----------- DARK MODE ---------------->
                 </ul>
-                <i class="fa-solid fa-bars" style="color: #ffffff; cursor: pointer;" onclick="openmenu()"></i>
-
+                <i class="fa-solid fa-bars" id="menu-icon" style="color: #ffffff; cursor: pointer;" onclick="openmenu()"></i>
             </nav>
+
             <div class="header-text">
                 <h1>Hello, lovely human. <br>I'm <span>Tulsi Patel</span>.</h1>
-                <a href="images/Tulsiben_Patel_Resume.pdf" download class="cta-btn">Download Resume</a>
+                <a href="images/Tulsiben_Patel_resume.pdf" download class="cta-btn">Download Resume</a>
             </div>
+
             <div class="images">
                 <img src="images/Pic1.png" class="mypic">
             </div>
@@ -57,7 +60,7 @@
                     <h1 class="sub-title">About Me</h1>
                     <p> </p>
                     <p>Welcome to my corner of the internet! </p>
-                    <p>As I find myself approaching the final stretch of my senior year, I'm excited to earn my degree in Computer Science with a minor in Mathematics. Ever since I typed my first line of HTML code in high school. What started as a simple experiment has sparked curiosity for the boundless possibilities that the world of technology holds. </p>
+                    <p>As I find myself approaching the final stretch of my senior year, I'm excited to earn my degree in Computer Science with a minor in Mathematics. Ever since I typed my first line of HTML code in high school, what started as a simple experiment has sparked curiosity for the boundless possibilities that the world of technology holds. </p>
                     <p>As I prepare to step beyond the university gates, I'm excited to embark on a new journey where learning and growth accompany me.</p>
                     <p>Thank you for sharing your time with me. I wholeheartedly extend an invitation to you - reach out whenever you'd like, be it for a message, questions, suggestions, or to give advice. Let's forge a connection and together, let's construct something truly extraordinary.</p>
                 </div>
@@ -70,28 +73,25 @@
     <div id="skill">
         <div class="container">
             <h1 class="sub-title">Skills</h1>
-            <p> <br> </p>
             <div class="skill-list">
                 <div>
-                    <i class="fa-solid fa-school"></i>
-                        <h2>Education</h2>
+                    <i class="fa-solid fa-laptop-code"></i>
+                        <h2>Front-end</h2>
                         <ul>
-                            <li><p>University of Houston <br> 2021 - Current</p></li>
-                            <li><p>Brazosport College <br> 2019 - 2021 </p></li>
+                            <li><p>HTML</p></li>
+                            <li><p>CSS</p></li>
+                            <li><p>Java Script</p></li>
+                            <li><p>R</p></li>
                         </ul>
                 </div>
 
                 <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Languages</h2>
+                    <i class="fa-solid fa-server"></i>
+                    <h2>Back-end</h2>
                     <ul>
                         <li><p>Python</p></li>
                         <li><p>C++</p></li>
-                        <li><p>HTML</p></li>
-                        <li><p>CSS</p></li>
-                        <li><p>Java Script</p></li>
                         <li><p>SQL</p></li>
-                        <li><p>R</p></li>
                     </ul>
                 </div>
 
@@ -111,16 +111,52 @@
     </div>
 
 
+<!--------------Education---------------------->
+
+    <div id="education">
+        <div class="container">
+            <h1 class="sub-title">Education</h1>
+
+        <div class="college">
+          <div class="college-name">University of Houston</div>
+          <div class="degree">Bachelor of Science in Computer Science with a Minor in Mathematics</div>
+          <!--------
+          <div class="graduation-date">Graduated in May 2022</div>
+          <div class="description">Studied computer science with a focus on algorithms and data structures.</div> -->
+          <div class="courses-list">
+            <div class="course">Computer Science and Programming</div>
+            <div class="course">Introduction to Programming</div>
+            <div class="course">Programming and Data Structures</div>
+            <div class="course">Computer Organization and Architecture</div>
+            <div class="course">Algorithms and Data Structures</div>
+            <div class="course">Introduction to Automata and Computability</div>
+            <div class="course">Fundamentals of Operating Systems</div>
+            <div class="course">Database Systems</div>
+            <div class="course">Fundamentals of Software Engineering</div>
+            <div class="course">Digital Image Processing</div>
+            <div class="course">Fundamentals of Medical Imaging</div>
+            <!-- Add more courses here -->
+          </div>
+        </div>
+        <div class="college">
+          <div class="college-name">Brazosport College</div>
+          <div class="degree">Completed 60+ hours towards associate degree in Associates of Science</div>
+          <!---
+          <div class="description">Studied fine arts and developed a strong foundation in various artistic techniques.</div>-->
+        </div>
+        </div>
+    </div>
+
 <!------------Portfolio------------->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title"> Portfolio </h1>
             <div class="work-list">
 
                 <div class="work">
                     <img src="images/website.png">
                     <div class="layer">
-                        <h3>My Portfolio Website</h3>
+                        <h2>My Portfolio Website</h2>
                         <p>This is my personal portfolio website to showcase all my work and achivement.</p>
                         <a href="https://github.com/TulsiiPatel/TulsiiPatel.github.io" target="_blank" rel="noopener noreferrer">Code</a>
                     </div>
@@ -129,7 +165,7 @@
                 <div class="work">
                     <img src="images/Password.png">
                     <div class="layer">
-                        <h3>Password Generator</h3>
+                        <h2>Password Generator</h2>
                         <p>A very simple project that lets you select what the password should contain and randomly generates the password.</p>
                         <a href="https://github.com/TulsiiPatel/PasswordGenerator" target="_blank" rel="noopener noreferrer">Code</a>
                     </div>
@@ -138,7 +174,7 @@
                 <div class="work">
                     <img src="images/Work.png">
                     <div class="layer">
-                        <h3>Currently in development</h3>
+                        <h2>Currently in development</h2>
                         <a href="#portfolio">Code</a>
                     </div>
                 </div>
@@ -166,17 +202,17 @@
                 <div class="contact-right">
                     <div class="social-icons">
 
-                        <a><i class="fa-regular fa-envelope"></i> Tulsi1141@gmail.com </a>
+                        <a><i class="fa-regular fa-envelope"></i> tulsi1141@gmail.com </a><br>
 
-                        <a><i class="fa-solid fa-phone"></i> (979) 900-0178 </a>
+                        <a><i class="fa-solid fa-phone"></i> (979) 900-0178 </a><br>
 
                         <a href="https://www.linkedin.com/in/tulsiben-patel-1141t" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-linkedin"></i> LinkedIn </a><br>
                         
                         <a href="https://github.com/TulsiiPatel" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-square-github"></i> GitHub  </a>
+                            <i class="fa-brands fa-square-github"></i> GitHub  </a><br>
                         
-                        <a href="images/Tulsiben_Patel_Resume.pdf" download><i class="fa-solid fa-download"></i> Download Resume</a>
+                        <a href="images/Tulsiben_Patel_resume.pdf" download><i class="fa-solid fa-download"></i> Resume</a>
                     </div>
                 </div>
             </div>
@@ -187,7 +223,7 @@
     </div>
 
 
-<!-------------moblie view sidemenu-------------->
+<!-------------moblie view sidemenu
     <script>
         var sidemeu = document.getElementById("sidemenu");
 
@@ -198,7 +234,25 @@
             sidemeu.style.right = "-200px";
         }
     </script>
+-------------->
 
+<script>
+var sidemeu = document.getElementById("sidemenu");
+var menuIcon = document.getElementById("menu-icon");
+var closeIcon = document.getElementById("close-icon");
+
+function openmenu(){
+    sidemeu.style.right = "0";
+    menuIcon.style.opacity = "0"; // Hide the menu icon
+    closeIcon.style.opacity = "1"; // Show the close icon
+}
+
+function closemenu(){
+    sidemeu.style.right = "-200px";
+    menuIcon.style.opacity = "1"; // Show the menu icon
+    closeIcon.style.opacity = "0"; // Hide the close icon
+}
+</script>
 
 <!------------send contact info to google sheets-------------->
     <script>
