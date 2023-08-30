@@ -383,8 +383,8 @@ nav ul li a:hover::after{
 .courses-list{
     display: grid;
     font-weight: 500;
-    grid-template-columns: repeat(3, minmax(calc(33.33% - 10px), 1fr)); /* Adjust the width and spacing as needed */
-    grid-gap: 10px; /* Add a small gap between courses */
+    grid-template-columns: repeat(3, minmax(calc(33.33% - 10px), 1fr));
+    grid-gap: 10px; 
     margin-top: 10px;
     padding-left: 20px;
     color: #aa9cb4;
