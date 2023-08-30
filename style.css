@@ -330,7 +330,7 @@ nav ul li a:hover::after{
     margin-bottom: 1%;
 }
 
-.education-section{
+.education{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
@@ -353,7 +353,7 @@ nav ul li a:hover::after{
 }
 
 
-.college-name{
+.collegename{
     font-size: 24px;
     font-weight: bold;
     color: #fff;
